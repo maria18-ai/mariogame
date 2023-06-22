@@ -24,13 +24,16 @@
 .mario {
     width: 150px;
     position: absolute;
-    bottom: 0;
+    bottom: 0;  
+}
+
+.jump {
     animation: jump 500ms ease-out;
 }
 
 @keyframes pipe-animation {
     from {
-        right: 0;
+        right: -180px;
     }
 
     to {
