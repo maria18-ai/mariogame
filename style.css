@@ -1,19 +1,23 @@
+/* Configurações globais */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Configuração da tela do jogo */
 .game-board {
     width: 100%;
     height: 500px;
     border-bottom: 15px solid rgb(1, 177, 1);
     margin: 0 auto;
     position: relative;
-    overflow: hidden;
+    overflow: hidden; /* o que sair da tela do jogo fica escondido (se referidno 
+    as nuvens do jogo */
     background: linear-gradient(#87CEEB, #E0F6FF);
 }
 
+/* Configuração do cano */
 .pipe {
     position: absolute;
     bottom: 0;
@@ -22,33 +26,36 @@
     animation: pipe-animation 2s infinite linear;
 }
 
+/* Configuração do Mario */
 .mario {
     width: 150px;
     position: absolute;
     bottom: 0;  
 }
 
+/* Configuração do pulo */
 .jump {
     animation: jump 500ms ease-out;
 }
 
+/* Configuração das nuvens*/
 .clouds {
     width: 550px;
     position: absolute;
     animation: clouds-animation 20s infinite linear;
 }
 
-@keyframes pipe-animation {
+@keyframes pipe-animation { /* Animação do cano */
     from {
         right: -180px;
     }
-
+    /*o cano começa com -180 da tela pelo right e vai ate 100% da tela pelo right*/
     to {
         right: 100%;
     } 
 }
 
-@keyframes jump {
+@keyframes jump { /* Animação do pulol */
     0% {
         bottom: 0;
     }
@@ -64,17 +71,18 @@
     60% {
         bottom: 180px;
     }
-
+    /* em 40%, 50% e 60% está com os mesmos valores para dar a impressão de pulo */
     100% {
         bottom: 0;
     }
 }
 
-@keyframes clouds-animation {
+@keyframes clouds-animation { /* Animação das nuvens*/
     from {
         right : -550px;
     }
     to {
         right: 100%;
     }
+    /* As nuvens saem do right -550 da tela e vão até 100% */
 }
